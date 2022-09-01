@@ -16,7 +16,7 @@ let path = {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/styles.scss",
 		js: source_folder + "/js/script.js",
-		img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
+		img: source_folder + "/img/**/*.*",
 		fonts: source_folder + "/fonts/*.ttf",
 	},
 	watch: {
@@ -115,6 +115,7 @@ function images() {
 		/*.pipe(webp({
 			quality: 70,
 		}))*/
+		/*.pipe(fileinclude())
 		.pipe(dest(path.build.img))
 		.pipe(src(path.src.img))
 		.pipe(imagmin({
@@ -122,7 +123,7 @@ function images() {
 			svgPlugins: [{removeViewBox: false}],
 			interlaced: true,
 			optimizationLevel: 3, // 0 to 7
-		}))
+		}))*/
 		.pipe(dest(path.build.img))
 		.pipe(browsersync.stream());
 }
@@ -137,16 +138,16 @@ gulp.task('svgSprite', function () {
 			           },
 		           },
 	           }))
-	           .pipe(dest(path.build.html));
+	           .pipe(dest(path.build.icons));
 });
 
 function fonts() {
 	src(path.src.fonts)
 		.pipe(ttf2woff())
-		.pipe(dest(path.build.html));
+		.pipe(dest(path.build.fonts));
 	return src(path.src.fonts)
 		.pipe(ttf2woff2())
-		.pipe(dest(path.build.html));
+		.pipe(dest(path.build.fonts));
 }
 
 function fontsStyle(params) {
