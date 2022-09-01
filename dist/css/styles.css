@@ -84,6 +84,99 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std"), url("../fonts/CircularStd-Book.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Circular Std"), url("../fonts/CircularStd-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Circular Std Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Circular Std"), url("../fonts/CircularStd-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Circular Std Black";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Circular Std Black"), url("../fonts/CircularStd-Black.ttf") format("ttf");
+}
+
+body {
+  font-family: "Circular Std";
+  font-size: 20px;
+  color: #313131;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1310px;
+  margin: 0 auto;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 252px;
+          flex: 0 0 252px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
