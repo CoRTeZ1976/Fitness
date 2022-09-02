@@ -84,7 +84,7 @@ select {
   font-style: normal;
   font-weight: 400;
   src: local('Circular Std'),
-  url("../fonts/CircularStd-Book.ttf") format('ttf');
+  url("../fonts/CircularStd-Book.woff") format('woff');
 }
 
 @font-face {
@@ -92,7 +92,7 @@ select {
   font-style: normal;
   font-weight: 500;
   src: local('Circular Std'),
-  url("../fonts/CircularStd-Medium.ttf") format('ttf');
+  url("../fonts/CircularStd-Medium.woff") format('woff');
 }
 
 @font-face {
@@ -100,7 +100,7 @@ select {
   font-style: normal;
   font-weight: 700;
   src: local('Circular Std'),
-url("../fonts/CircularStd-Bold.ttf") format('ttf');
+url("../fonts/CircularStd-Bold.woff") format('woff');
 }
 
 @font-face {
@@ -108,7 +108,7 @@ url("../fonts/CircularStd-Bold.ttf") format('ttf');
   font-style: normal;
   font-weight: 700;
   src: local('Circular Std Black'),
-  url("../fonts/CircularStd-Black.ttf") format('ttf');
+  url("../fonts/CircularStd-Black.woff") format('woff');
 }
 
 body {
@@ -125,21 +125,32 @@ body {
 }
 
 [class*="__container"] {
-  max-width: 1310px;
+  max-width: 1340px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-a {
+a,
+a.menu__item:active {
   text-decoration: none;
+  font-family: "Circular Std Book";
+  color: #313131;
 }
 
 .button {
+  font-family: "Circular Std Book";
+  display: inline-block;
   padding: 15.25px 51.79px;
   border-radius: 5px;
-}
-
-.button-dark {
   background: #313131;
-  color: #ffffff
+  color: #ffffff;
 }
 
+.button:hover,
+a:hover {
+  opacity: 60%;
+  transition: all 0.3s ease 0s;
+}
+
+
+@import "header";
