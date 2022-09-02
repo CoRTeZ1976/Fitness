@@ -1,0 +1,50 @@
+.header {
+}
+
+.header__container {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	min-height: 118px;
+}
+
+.header__logo {
+	margin-right: 393px;
+}
+
+.header__menu {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: flex-end;
+}
+
+.menu__list {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu__item {
+}
+
+.header__link {
+}
+
+.header__button {
+	flex: 0 0 235px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 203px;
+}
+
+.button__link {
+}
+
