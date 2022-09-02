@@ -1,120 +1,15 @@
-/* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import "nullstyle";
+@import "fontstyle";
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-@font-face {
-  font-family: 'Circular Std Book';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Circular Std'),
-  url("../fonts/CircularStd-Book.woff") format('woff');
-}
-
-@font-face {
-  font-family: 'Circular Std';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Circular Std'),
-  url("../fonts/CircularStd-Medium.woff") format('woff');
-}
-
-@font-face {
-  font-family: 'Circular Std Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Circular Std'),
-url("../fonts/CircularStd-Bold.woff") format('woff');
-}
-
-@font-face {
-  font-family: 'Circular Std Black';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Circular Std Black'),
-  url("../fonts/CircularStd-Black.woff") format('woff');
-}
+$gray: #313131;
+$yellow: #FFE500;
+$white: #ffffff;
+$black: #000;
 
 body {
   font-family: "Circular Std";
   font-size: 17px;
-  color: #313131;
+  color: $gray;
 }
 
 .wrapper {
@@ -130,11 +25,10 @@ body {
   padding: 0 15px;
 }
 
-a,
-a.menu__item:active {
-  text-decoration: none;
+a {
   font-family: "Circular Std Book";
-  color: #313131;
+  color: $gray;
+  text-decoration: none;
 }
 
 .button {
@@ -142,15 +36,13 @@ a.menu__item:active {
   display: inline-block;
   padding: 15.25px 51.79px;
   border-radius: 5px;
-  background: #313131;
-  color: #ffffff;
+  background: $gray;
+  color: $white;
+  
+  &:hover {
+    opacity: 60%;
+    transition: all 0.3s ease 0s;
+  }
 }
-
-.button:hover,
-a:hover {
-  opacity: 60%;
-  transition: all 0.3s ease 0s;
-}
-
 
 @import "header";
