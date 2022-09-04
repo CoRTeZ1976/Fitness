@@ -1,7 +1,7 @@
-let menuBtn = document.querySelector(".icon-menu");
-let menu = document.querySelector(".menu__body");
+let menuBtn = document.querySelector('.icon-menu');
+let menu = document.querySelector('.menu__body');
 
 menuBtn.addEventListener('click', function (){
-	menu.classList.toggle('active');
-	
+	menu.classList.toggle('open');
+	menuBtn.classList.toggle('open');
 })

@@ -104,20 +104,52 @@
 		display: flex;
 		position: relative;
 		flex: 0 0 30px;
-		height: 18px;
+		height: 20px;
 		flex-direction: column;
 		justify-content: space-between;
+		transition: all 0.5s ease-in-out 0s;
 		
 		& span {
-			height: 2px;
+			height: 3px;
 			background: $gray;
+			
+			display: block;
+			position: absolute;
+			width: 100%;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
 		}
 		
-		&:before,
-		&:after {
-			content: "";
-			background: $gray;
-			height: 2px;
+		& span:nth-of-type(1) {
+			top: 0;
+		}
+		
+		& span:nth-of-type(2),
+		& span:nth-of-type(3) {
+			top: 9px;
+		}
+		
+		& span:nth-of-type(4) {
+			top: 18px;
+		}
+		
+		&.open span:nth-child(1) {
+			top: 9px;
+			width: 0%;
+			left: 50%;
+		}
+		&.open span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+		&.open span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+		&.open span:nth-child(4) {
+			top: 18px;
+			width: 0%;
+			left: 50%;
 		}
 	}
 	
@@ -132,7 +164,7 @@
 		transition: left 0.3s ease 0s;
 	}
 	
-	.menu__body.active {
+	.menu__body.open {
 		left: 0;
 	}
 	
