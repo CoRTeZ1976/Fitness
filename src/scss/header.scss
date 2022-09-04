@@ -132,7 +132,7 @@
 		transition: left 0.3s ease 0s;
 	}
 	
-	.menu__body:target {
+	.menu__body.active {
 		left: 0;
 	}
 	
