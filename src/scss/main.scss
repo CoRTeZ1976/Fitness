@@ -4,32 +4,69 @@
 .main__container {
 	display: flex;
 	min-height: 872px;
-	padding-top: 75px;
+	padding: 75px 0 0 0;
 }
 
 .main__content {
-	padding-top: 265px;
+	max-width: 517px;
+	max-height: 453px;
+	margin: 265px 0 0 82px;
 }
 
 .main__logo {
+	position: relative;
+	max-width: 393px;
+	max-height: 154px;
+	
+	&.health {
+		position: absolute;
+	}
+	
+	&.andSymbol {
+		position: absolute;
+		top: 48px;
+	}
+	
+	&.fitness {
+		position: absolute;
+		top: 82px;
+		left: 72px;
+	}
 }
 
 .main__text {
-}
-
-.main__text-bold {
-}
-
-.main__text-normal {
+	position: relative;
+	top: 204px;
+	width: 517px;
+	margin-bottom: 71px;
+	
+	&-bold {
+		font-family: "Circular Std Bold";
+	}
+	
+	&-normal {
+		font-family: "Circular Std";
+		position: relative;
+		top: 41px;
+		max-width: 422px;
+	}
 }
 
 .main__input {
-}
-
-.main_email {
-}
-
-.button {
+	position: relative;
+	top: 241px;
+	height: 58px;
+	
+	& .main_email {
+		width: 320px;
+		
+	}
+	
+	& .button {
+		width: 197px;
+		border-bottom-right-radius: 5px;
+	}
+	
 }
 
 .main__spline {
