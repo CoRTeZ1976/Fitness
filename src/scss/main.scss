@@ -56,15 +56,22 @@
 	position: relative;
 	top: 241px;
 	height: 58px;
+	display: flex;
+	align-items: center;
+
 	
 	& .main_email {
 		width: 320px;
+		height: inherit;
 		
 	}
 	
 	& .button {
 		width: 197px;
-		border-bottom-right-radius: 5px;
+		height: inherit;
+		border-radius: 0 5px 5px 0;
+		text-align: center;
+		padding: 15px 0;
 	}
 	
 }
