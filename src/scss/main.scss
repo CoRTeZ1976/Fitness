@@ -1,179 +1,56 @@
 .main {
-	position: relative;
 }
 
 .main__container {
 	display: flex;
-	min-height: 872px;
-	padding: 75px 0 0 0;
 }
 
 .main__content {
-	position: relative;
-	max-width: 517px;
-	max-height: 453px;
-	margin: 265px 0 0 82px;
 }
 
 .main__logo {
-	position: relative;
-	max-width: 393px;
-	max-height: 154px;
-	
-	&.health {
-		position: absolute;
-	}
-	
-	&.andSymbol {
-		position: absolute;
-		top: 48px;
-	}
-	
-	&.fitness {
-		position: absolute;
-		top: 82px;
-		left: 72px;
-	}
+}
+
+.health {
+}
+
+.andSymbol {
+}
+
+.fitness {
 }
 
 .main__text {
-	position: relative;
-	top: 204px;
-	width: 517px;
-	margin-bottom: 71px;
-	
-	&-bold {
-		font-family: "Circular Std Bold";
-	}
-	
-	&-normal {
-		font-family: "Circular Std-Book";
-		position: relative;
-		top: 41px;
-		max-width: 422px;
-	}
+}
+
+.main__text-bold {
+}
+
+.main__text-normal {
 }
 
 .main__input {
-	position: relative;
-	top: 241px;
-	height: 58px;
-	display: flex;
-	align-items: center;
+}
 
-	
-	& .main_email {
-		width: 320px;
-		height: inherit;
-		
-	}
-	
-	& .button {
-		width: 197px;
-		height: inherit;
-		border-radius: 0 5px 5px 0;
-		text-align: center;
-		padding: 15px 0;
-	}
-	
+.main_email {
+}
+
+.button {
 }
 
 .main__spline {
-	z-index: -2;
-	position: absolute;
-	
-	&.left__spline {
-		max-width: 100%;
-		height: auto;
-		top: -184px;
-		left: 247px;
-	}
-	
-	&.right__spline {
-		top: 100px;
-		left: 907px;
-		
-	}
+
 }
 
-.main__fig {
-	position: relative;
-	max-width: 566px;
-	height: auto;
-	margin-left: 46px;
-
-	
-	.main__figure {
-		width: 500px;
-		height: 660px;
-		background: $yellow;
-		top: 255px;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		margin: 0;
-		border-radius: 250px 250px 0 0;
-		z-index: -3;
-		position: absolute;
-	}
-	
-	.main__image {
-		z-index: -1;
-		max-width: 100%;
-		height: auto;
-	}
+.left__spline {
 }
 
-
-// PC
-@media (max-width: 1340px) {
-	.main__fig {
-		align-self: end;
-		
-		.main__figure {
-			top: 155px;
-			left: 10px;
-			width: 300px;
-		}
-	}
-	
-	.main__spline {
-		z-index: -2;
-		position: absolute;
-		
-		&.left__spline {
-			top: -170px;
-			left: 147px;
-		}
-		
-		&.right__spline {
-			top: 100px;
-			left: 700px;
-			
-		}
-	}
+.main__figure {
 }
 
-// Tablet
-@media (max-width: 991.98px) {
-	.main__fig {
-		display: none;
-	}
-	
-	.main__spline {
-		
-		&.left__spline {
-			top: -220px;
-			left: 20px;
-		}
-		
-		&.right__spline {
-			display: none;
-		}
-	}
+.right__spline {
 }
 
-// Mobile
-@media (max-width: 767.98px) {
+.main__image {
 
 }
