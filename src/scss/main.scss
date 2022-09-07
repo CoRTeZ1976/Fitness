@@ -1,5 +1,6 @@
 .main {
-	margin-top: 118px;
+	//height: 872px;
+	padding-top: 118px;
 	
 	.main__container {
 		display: flex;
@@ -10,8 +11,9 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-start;
-			margin: 0 84px 0 84px;
+			padding: 0 84px 0 84px;
 			height: 915px;
+			flex: 0 0 46%;
 			
 			.main__logo {
 				position: relative;
@@ -59,11 +61,12 @@
 						&::placeholder {
 							padding-left: 17px;
 							opacity: 20%;
+							color: #000000;
 						}
 					}
 					
 					.main__button {
-						flex: 0 0 38%;
+						flex: 0 0 195px;
 						border-radius: 0 5px 5px 0;
 					}
 				}
@@ -71,17 +74,17 @@
 		}
 		
 		.main__spline {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -5;
-			width: 100%;
-			height: auto;
-			
+			&,
 			.left__spline,
 			.right__spline {
 				position: absolute;
 			}
+			
+			top: 0;
+			left: 0;
+			z-index: -3;
+			width: 100%;
+			height: 872px;
 			
 			.left__spline {
 				max-width: 566px;
@@ -93,16 +96,32 @@
 			.right__spline {
 				max-width: 828.5px;
 				max-height: 810px;
-				bottom: 127px;
-				right: -55px;
+				top: 31px;
+				left: 907px;
 			}
 		}
 		
 		.main__figure {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			flex: 1 1 54%;
+			
+			.main__figure-bg {
+				background: $yellow;
+				width: 75%;
+				height: 76%;
+				border-radius: 250px 250px 0 0;
+				z-index: -5;
+			}
 			
 			.main__image {
-			
+				position: absolute;
+				top: -43px;
+				left: -33px;
 			}
+			
 		}
 	}
 	
