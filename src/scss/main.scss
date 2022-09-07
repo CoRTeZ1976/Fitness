@@ -12,7 +12,7 @@
 			justify-content: center;
 			align-items: flex-start;
 			padding: 0 84px 0 84px;
-			height: 915px;
+			height: 872px;
 			flex: 0 0 46%;
 			
 			.main__logo {
@@ -111,7 +111,7 @@
 			.main__figure-bg {
 				background: $yellow;
 				width: 75%;
-				height: 76%;
+				height: 660px;
 				border-radius: 250px 250px 0 0;
 				z-index: -5;
 			}
@@ -121,10 +121,8 @@
 				top: -43px;
 				left: -33px;
 			}
-			
 		}
 	}
-	
 }
 
 
