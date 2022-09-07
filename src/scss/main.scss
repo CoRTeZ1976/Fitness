@@ -1,56 +1,111 @@
 .main {
+	margin-top: 118px;
+	
+	.main__container {
+		display: flex;
+		position: relative;
+		
+		.main__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			margin: 0 84px 0 84px;
+			height: 915px;
+			
+			.main__logo {
+				position: relative;
+				//flex: 1 1 100%;
+				margin-bottom: 45px;
+				
+				.main__health {
+				}
+				.main__andSymbol {
+					position: absolute;
+					z-index: -1;
+					top: 48px;
+					left: 0px;
+				}
+				.main__fitness {
+					padding-left: 71px;
+				}
+			}
+			
+			.main__text {
+				max-width: 517px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				
+				.main__text-bold {
+					font-family: 'Circular Std Bold';
+					padding-bottom: 20.5px;
+				}
+				
+				.main__text-normal {
+					font-family: 'Circular Std Book';
+					padding-top: 20.5px;
+				}
+				
+				.main__input {
+					display: flex;
+					height: 58px;
+					margin-top: 71px;
+					
+					.main__email {
+						flex: 1 1 62%;
+						border-radius: 5px 0 0  5px;
+						border-right: 0;
+						&::placeholder {
+							padding-left: 17px;
+							opacity: 20%;
+						}
+					}
+					
+					.main__button {
+						flex: 0 0 38%;
+						border-radius: 0 5px 5px 0;
+					}
+				}
+			}
+		}
+		
+		.main__spline {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -5;
+			width: 100%;
+			height: auto;
+			
+			.left__spline,
+			.right__spline {
+				position: absolute;
+			}
+			
+			.left__spline {
+				max-width: 566px;
+				max-height: 317px;
+				top: 39px;
+				left: 345px;
+			}
+			
+			.right__spline {
+				max-width: 828.5px;
+				max-height: 810px;
+				bottom: 127px;
+				right: -55px;
+			}
+		}
+		
+		.main__figure {
+			
+			.main__image {
+			
+			}
+		}
+	}
+	
 }
 
-.main__container {
-	display: flex;
-}
 
-.main__content {
-}
-
-.main__logo {
-}
-
-.health {
-}
-
-.andSymbol {
-}
-
-.fitness {
-}
-
-.main__text {
-}
-
-.main__text-bold {
-}
-
-.main__text-normal {
-}
-
-.main__input {
-}
-
-.main_email {
-}
-
-.button {
-}
-
-.main__spline {
-
-}
-
-.left__spline {
-}
-
-.main__figure {
-}
-
-.right__spline {
-}
-
-.main__image {
-
-}
